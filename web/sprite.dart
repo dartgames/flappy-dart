@@ -16,5 +16,11 @@ abstract class Sprite {
         canvasContext.drawImageScaled(image, x, y, width, height);
     }
     
+    void move(int dx, int dy) {
+        x += dx;
+        y += dy;
+        boundingBox = new Rectangle(x, y, width, height);
+    }
+    
     void update();
 }
